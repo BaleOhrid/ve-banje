@@ -1,0 +1,113 @@
+/* Reset a basic style */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+  color: #333;
+}
+
+/* Navigation bar */
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #1c67c9;
+  padding: 1rem 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+#navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+#navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.4rem;
+  transition: color 0.3s ease;
+}
+
+#navbar a:hover {
+  color:#ffa500;
+}
+/* Welcome section */
+#welcome-section { background-image: url(images/pogled.png); background-repeat: no-repeat; 
+  background-size: cover;
+  height: 80vh; /* viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #89f7fe 0%, );
+  text-align: center;
+  padding: 0 1rem;
+}
+
+#welcome-section h1 {
+  font-size: 4rem;
+  color:#37ed2d;
+  text-shadow: 4px 4px 7px rgba(0,0,0,0.3);
+}
+
+/* Projects section */
+#projects {background-image: url(images/crkva.png); background-repeat: no-repeat; background-size: cover;
+  padding: 4rem 1rem;
+  height: 95vh;
+  margin: 0 auto;
+}
+
+#projects h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #004080;
+}
+
+.project-tile { position:relative;
+  background-color: #89eb34;
+  border: 2px solid #004080;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.project-tile a {
+  text-decoration: none;
+  color: #2069d6;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.project-tile, a:hover {
+  background-color: #86e335; color:#9b1d34
+}
+
+/* Media query for smaller screens*/
+@media (max-width: 600px) {
+  #navbar ul {
+    flex-direction: row;
+    gap: 1rem;
+  }
+  
+  #welcome-section h1 {
+    font-size: 3rem;
+  }
+
+  #projects h2 {
+    font-size: 2rem;
+  }
+
+  .project-tile a {
+    font-size: 1rem;
+  }
+}
